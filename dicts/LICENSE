@@ -1,0 +1,21 @@
+Morphological dictionaries for Russian
+======================================
+
+The files in this directory (*.dawg, *.intdawg, *.json, paradigms.array) are
+the OpenCorpora dictionary (version 0.92, revision 394551, see meta.json)
+compiled for pymorphy2 (format 2.4) and redistributed with Az.js v0.2.3.
+
+  Source data:   OpenCorpora — http://opencorpora.org/
+                 (c) OpenCorpora contributors
+  Compiled by:   pymorphy2-dicts — https://github.com/kmike/pymorphy2-dicts
+  Repackaged by: Az.js — https://github.com/deNULL/Az.js
+
+License: Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+         https://creativecommons.org/licenses/by-sa/3.0/
+
+The data is redistributed unmodified. If you modify these files, you must
+distribute your version under the same license (CC BY-SA 3.0 or compatible)
+and keep this attribution.
+
+These files are data, distributed alongside (not as part of) the RuMorph
+program code, which is licensed separately under AGPL-3.0 (see ../LICENSE).
