@@ -1,0 +1,61 @@
+<div class="rumorph-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>RuMorph</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <small class="rumorph-subtitle" data-i18n="Russian word forms for lorebook (World Info) keys">Russian word forms for lorebook (World Info) keys</small>
+
+            <label class="checkbox_label" for="rumorph_enabled">
+                <input id="rumorph_enabled" type="checkbox" />
+                <span data-i18n="Enabled">Enabled</span>
+            </label>
+
+            <label class="checkbox_label" for="rumorph_strict" data-i18n="[title]Require Unicode word boundaries around every key, so «кот» does not fire on «котлета». If off, boundaries are used only for entries with Match Whole Words." title="Require Unicode word boundaries around every key, so «кот» does not fire on «котлета». If off, boundaries are used only for entries with Match Whole Words.">
+                <input id="rumorph_strict" type="checkbox" />
+                <span data-i18n="Strict word boundaries">Strict word boundaries</span>
+            </label>
+
+            <div class="rumorph-row">
+                <label for="rumorph_min_len" data-i18n="Minimum word length to inflect">Minimum word length to inflect</label>
+                <input id="rumorph_min_len" class="text_pole rumorph-num" type="number" min="1" max="10" step="1" />
+            </div>
+
+            <hr class="sysHR" />
+            <b data-i18n="Preview">Preview</b>
+            <div id="rumorph_preview_slot"></div>
+
+            <hr class="sysHR" />
+            <b data-i18n="Compile a lorebook">Compile a lorebook</b>
+            <small class="rumorph-hint" data-i18n="Writes the generated regex keys into the lorebook itself, so it also works for people without RuMorph. Original keys are kept and can be restored.">Writes the generated regex keys into the lorebook itself, so it also works for people without RuMorph. Original keys are kept and can be restored.</small>
+            <div class="rumorph-row">
+                <select id="rumorph_world" class="text_pole flex1"></select>
+                <div id="rumorph_refresh_worlds" class="menu_button fa-solid fa-arrows-rotate" title="Refresh" data-i18n="[title]Refresh"></div>
+            </div>
+            <div class="rumorph-row">
+                <div id="rumorph_compile" class="menu_button menu_button_icon">
+                    <i class="fa-solid fa-hammer"></i>
+                    <span data-i18n="Compile">Compile</span>
+                </div>
+                <div id="rumorph_restore" class="menu_button menu_button_icon">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    <span data-i18n="Restore">Restore</span>
+                </div>
+            </div>
+
+            <hr class="sysHR" />
+            <div class="rumorph-row">
+                <div id="rumorph_clear_cache" class="menu_button menu_button_icon">
+                    <i class="fa-solid fa-broom"></i>
+                    <span data-i18n="Clear cache">Clear cache</span>
+                </div>
+                <label class="checkbox_label" for="rumorph_debug">
+                    <input id="rumorph_debug" type="checkbox" />
+                    <span data-i18n="Debug log">Debug log</span>
+                </label>
+            </div>
+            <small id="rumorph_status" class="rumorph-status"></small>
+        </div>
+    </div>
+</div>

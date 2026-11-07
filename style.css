@@ -1,0 +1,104 @@
+.rumorph-settings .inline-drawer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.rumorph-subtitle,
+.rumorph-hint,
+.rumorph-status {
+    opacity: 0.8;
+}
+
+.rumorph-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.rumorph-num {
+    width: 5em;
+}
+
+.rumorph-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.rumorph-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    font-size: 0.9em;
+}
+
+.rumorph-word::before {
+    content: "●";
+    margin-right: 4px;
+}
+
+.rumorph-src-dictionary::before { color: #4caf50; }
+.rumorph-src-guess::before { color: #ff9800; }
+.rumorph-src-override::before { color: #2196f3; }
+.rumorph-src-short::before,
+.rumorph-src-latin::before,
+.rumorph-src-fixed::before { color: #9e9e9e; }
+
+.rumorph-forms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    max-height: 12em;
+    overflow-y: auto;
+}
+
+.rumorph-chip {
+    padding: 1px 6px;
+    border-radius: 8px;
+    border: 1px solid var(--SmartThemeBorderColor);
+    background: var(--black30a);
+    font-size: 0.9em;
+}
+
+.rumorph-regex {
+    display: block;
+    max-height: 6em;
+    overflow: auto;
+    word-break: break-all;
+    font-size: 0.8em;
+}
+
+.rumorph-test mark {
+    background: var(--SmartThemeQuoteColor);
+    color: var(--SmartThemeBodyColor);
+    border-radius: 3px;
+    padding: 0 2px;
+}
+
+.rumorph-yes { color: #4caf50; }
+.rumorph-no { color: #f44336; }
+
+.rumorph-override {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 6px;
+    border: 1px dashed var(--SmartThemeBorderColor);
+    border-radius: 6px;
+}
+
+.rumorph-ov-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.rumorph-ov-row a {
+    flex: 1;
+}
+
+.rumorph-ov-del {
+    padding: 2px 6px;
+}

@@ -1,0 +1,52 @@
+<div class="rumorph-preview">
+    <input id="rumorph_preview_key" class="text_pole" type="text" autocomplete="off" placeholder="Enter a key, e.g. Морвенна" data-i18n="[placeholder]Enter a key, e.g. Морвенна" />
+
+    <div id="rumorph_preview_out" class="displayNone">
+        <div id="rumorph_preview_words" class="rumorph-words"></div>
+        <small><span data-i18n="Forms">Forms</span>: <span id="rumorph_preview_count">0</span></small>
+        <div id="rumorph_preview_forms" class="rumorph-forms"></div>
+
+        <div class="rumorph-row">
+            <small data-i18n="Resulting regex key">Resulting regex key</small>
+            <div id="rumorph_copy_regex" class="menu_button fa-solid fa-copy" title="Copy" data-i18n="[title]Copy"></div>
+        </div>
+        <code id="rumorph_preview_regex" class="rumorph-regex"></code>
+
+        <input id="rumorph_test_phrase" class="text_pole" type="text" autocomplete="off" placeholder="Test a phrase, e.g. Я подошёл к Морвенне" data-i18n="[placeholder]Test a phrase, e.g. Я подошёл к Морвенне" />
+        <div id="rumorph_test_result" class="rumorph-test"></div>
+
+        <div id="rumorph_override_box" class="rumorph-override">
+            <b><span data-i18n="Manual hints for">Manual hints for</span> «<span id="rumorph_override_target"></span>»</b>
+            <div class="rumorph-row">
+                <label for="rumorph_ov_gender" data-i18n="Gender">Gender</label>
+                <select id="rumorph_ov_gender" class="text_pole">
+                    <option value="" data-i18n="auto">auto</option>
+                    <option value="m" data-i18n="masculine">masculine</option>
+                    <option value="f" data-i18n="feminine">feminine</option>
+                    <option value="n" data-i18n="neuter">neuter</option>
+                </select>
+                <label class="checkbox_label" for="rumorph_ov_indecl">
+                    <input id="rumorph_ov_indecl" type="checkbox" />
+                    <span data-i18n="Indeclinable">Indeclinable</span>
+                </label>
+            </div>
+            <input id="rumorph_ov_extra" class="text_pole" type="text" placeholder="Extra forms, comma-separated" data-i18n="[placeholder]Extra forms, comma-separated" />
+            <input id="rumorph_ov_exclude" class="text_pole" type="text" placeholder="Forms to exclude, comma-separated" data-i18n="[placeholder]Forms to exclude, comma-separated" />
+            <div class="rumorph-row">
+                <div id="rumorph_ov_save" class="menu_button menu_button_icon">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    <span data-i18n="Save hint">Save hint</span>
+                </div>
+                <div id="rumorph_ov_delete" class="menu_button menu_button_icon">
+                    <i class="fa-solid fa-trash-can"></i>
+                    <span data-i18n="Delete hint">Delete hint</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <details class="rumorph-ov-list-wrap">
+        <summary data-i18n="All manual hints">All manual hints</summary>
+        <div id="rumorph_override_list"></div>
+    </details>
+</div>
