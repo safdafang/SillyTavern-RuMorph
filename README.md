@@ -161,4 +161,4 @@ Bundled third party components:
 * OpenCorpora dictionaries compiled by [pymorphy2-dicts](https://github.com/kmike/pymorphy2-dicts),
   CC BY-SA 3.0, see [dicts/LICENSE](dicts/LICENSE). Distributed unmodified.
 
-The SillyTavern logo in the banner belongs to the SillyTavern project.
+The SillyTavern logo in the banner belongs to the SillyTavern project. Kasane Teto is a character by TWINDRILL, the illustration belongs to its artist.

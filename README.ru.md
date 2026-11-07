@@ -161,4 +161,4 @@ RuMorph распространяется по лицензии [GNU AGPL 3.0](LI
 * Словари OpenCorpora в сборке [pymorphy2-dicts](https://github.com/kmike/pymorphy2-dicts),
   CC BY-SA 3.0, см. [dicts/LICENSE](dicts/LICENSE). Распространяются без изменений.
 
-Логотип SillyTavern на баннере принадлежит проекту SillyTavern.
+Логотип SillyTavern на баннере принадлежит проекту SillyTavern. Касане Тето является персонажем TWINDRILL, иллюстрация принадлежит её автору.
