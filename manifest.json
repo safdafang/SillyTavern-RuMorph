@@ -1,0 +1,16 @@
+{
+    "display_name": "RuMorph: русская морфология для лорбука",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "safdafang",
+    "version": "0.1.0",
+    "homePage": "https://github.com/safdafang/SillyTavern-RuMorph",
+    "auto_update": true,
+    "minimum_client_version": "1.13.2",
+    "i18n": {
+        "ru-ru": "i18n/ru-ru.json"
+    }
+}

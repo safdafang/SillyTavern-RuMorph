@@ -1,0 +1,19 @@
+{
+  "name": "sillytavern-rumorph",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SillyTavern extension: Russian morphology for World Info (lorebook) keys",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "test": "node --test test/expand.test.mjs test/paradigms.test.mjs test/integration.test.mjs",
+    "bench": "node test/bench.mjs",
+    "vendor": "node scripts/vendor.mjs"
+  },
+  "devDependencies": {
+    "az": "0.2.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

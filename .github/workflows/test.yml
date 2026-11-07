@@ -1,0 +1,28 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+      - run: node scripts/i18n-check.mjs
+      - run: npm run bench
+      - name: Vendored Az.js matches npm az@0.2.3
+        run: |
+          npm ci
+          cp -r vendor /tmp/vendor-before && cp -r dicts /tmp/dicts-before
+          npm run vendor
+          diff -r /tmp/vendor-before vendor
+          diff -r /tmp/dicts-before dicts

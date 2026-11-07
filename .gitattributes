@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.dawg binary
+*.intdawg binary
+*.array binary
