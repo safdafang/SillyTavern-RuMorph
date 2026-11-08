@@ -151,6 +151,15 @@ assigns new arrays instead of editing them in place.
 Az.js is loaded with a `<script>` tag resolved from `import.meta.url`: the build is UMD, there is no
 bundler step, and the code in the repository is exactly the code that runs.
 
+## The Ru extension set
+
+* **RuMorph**: Russian word forms for lorebook keys.
+* [RuInflect](https://github.com/safdafang/SillyTavern-RuInflect): cases and gender for `{{user}}` and `{{char}}`:
+  «смотрит на {{uc::вн}}» → «смотрит на Анну», «ты {{ug::пришёл}}» → «ты пришла».
+
+Both use the same Az.js and dictionaries. With both installed the dictionaries are loaded once: the Az instance
+lives in `globalThis.__ruMorphCore` and is loaded by whichever extension starts first.
+
 ## Licence
 
 RuMorph is released under the [GNU AGPL 3.0](LICENSE).
