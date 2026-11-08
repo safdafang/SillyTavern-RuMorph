@@ -1,6 +1,7 @@
 import { KeyCache } from './src/cache.js';
 import { compileWorld, restoreWorld } from './src/compile.js';
 import { buildRegex, getForms, normalizeKey, shouldExpand } from './src/expand.js';
+import { acquireAz } from './src/loader.js';
 import { Morph, initAz, loadAzBrowser } from './src/morph.js';
 import { createLoreHandler, withTimeout } from './src/runtime.js';
 import { parseRegexFromString } from './src/st-compat.js';
@@ -59,14 +60,22 @@ function ensureMorph() {
         morphState = 'loading';
         updateStatus();
         const started = performance.now();
-        morphPromise = (async () => {
-            const Az = await loadAzBrowser(new URL('vendor/az/az.min.js', BASE_URL).href);
-            await initAz(Az, new URL('dicts', BASE_URL).href);
+        // One Az per page, shared with RuInflect.
+        const core = acquireAz({
+            owner: 'RuMorph',
+            load: async () => {
+                const Az = await loadAzBrowser(new URL('vendor/az/az.min.js', BASE_URL).href);
+                await initAz(Az, new URL('dicts', BASE_URL).href);
+                log(`dictionaries loaded in ${Math.round(performance.now() - started)} ms`);
+                return Az;
+            },
+        });
+        morphPromise = core.promise.then((Az) => {
             morphState = 'ready';
-            log(`dictionaries loaded in ${Math.round(performance.now() - started)} ms`);
+            if (core.owner !== 'RuMorph') log(`dictionaries shared with ${core.owner}`);
             updateStatus();
             return new Morph(Az);
-        })().catch((e) => {
+        }).catch((e) => {
             morphState = 'failed';
             morphPromise = null;
             console.error(LOG, 'failed to load Az.js', e);
